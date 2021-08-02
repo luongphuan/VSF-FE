@@ -27,6 +27,8 @@ export default {
 <style lang="scss" src="theme/css/main.scss"></style>
 <style lang="scss">
 @import "~@storefront-ui/shared/styles/helpers/breakpoints";
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-icons/font/bootstrap-icons.css';
 body {
   --overlay-z-index: 1;
   --sidebar-aside-z-index: 2;
@@ -34,7 +36,9 @@ body {
   --bottom-navigation-height: 3.75rem;
   --bar-height: 3.125rem;
   --notification-font-size: var(--font-sm);
-  font-family: var(--font-family-secondary);
+  // font-family: var(--font-family-secondary);
+  font-family: Sans-serif!important;
+  background-color: #F5F8FD;
   margin: 0;
   padding: 0;
   a {

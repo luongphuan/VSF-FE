@@ -2,7 +2,7 @@
   <div class="o-search">
     <SfSearchBar
       v-model="search"
-      :placeholder="$t('Type what you are looking for...')"
+      placeholder="Bạn cần tìm gì ?"
       class="sf-header__search"
       @input="startSearch"
       @click.native="$store.commit('ui/setSearchpanel', true)"

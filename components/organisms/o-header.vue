@@ -15,6 +15,7 @@
     >
       <template #logo>
         <ALogo />
+        <i class="cps-icon cps-logo" />
       </template>
       <template #navigation>
         <SfHeaderNavigationItem
@@ -196,5 +197,22 @@ export default {
       }
     }
   }
+}
+.sf-header .sf-header__wrapper{
+  background-color: #d70018;
+}
+.cps-icon{
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(https://cdn.cellphones.com.vn/media/icon/icons_menubar-11.svg);
+  background-repeat: no-repeat;
+  background-size: 1000px;
+}
+.cps-logo{
+  width: 189px;
+  height: 30px;
+  background-size: 450px;
+  background-position: -60px -6.5px;
+  margin-left: 10px;
 }
 </style>

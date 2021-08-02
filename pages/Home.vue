@@ -66,7 +66,8 @@ import {
   SfHero,
   SfSection,
   SfBannerGrid,
-  SfBanner
+  SfBanner,
+  SfSelect
 } from '@storefront-ui/vue';
 
 export default {
@@ -79,7 +80,8 @@ export default {
     SfBanner,
     MProductCarousel,
     ONewsletter,
-    AImagesGrid
+    AImagesGrid,
+    SfSelect
   },
   data () {
     return {

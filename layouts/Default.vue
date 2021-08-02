@@ -1,24 +1,28 @@
 <template>
   <div class="default-layout">
-    <MLoader />
+    <!-- <MLoader /> -->
     <div id="viewport">
-      <OHeader />
-      <OMicrocart />
-      <slot />
-      <OFooter />
-      <OModal />
+      <!-- <OHeader /> -->
+      <CPSHeader />
+      <CPSBody />
+      <!-- <OMicrocart />
+      <slot /> -->
+      <!-- <OFooter /> -->
+      <!-- <OModal />
       <ONotification />
       <MCookieNotification />
       <MOfflineBadge />
-      <OBottomNavigation />
+      <OBottomNavigation /> -->
     </div>
-    <vue-progress-bar />
+    <!-- <vue-progress-bar /> -->
   </div>
 </template>
 
 <script>
 import { mapActions } from 'vuex';
 import OHeader from 'theme/components/organisms/o-header';
+import CPSHeader from 'theme/components/cps/CPSHeader';
+import CPSBody from 'theme/components/cps/CPSBody';
 import OMicrocart from 'theme/components/organisms/o-microcart';
 import OFooter from 'theme/components/organisms/o-footer';
 import OModal from 'theme/components/organisms/o-modal';
@@ -30,7 +34,7 @@ import MOfflineBadge from 'theme/components/molecules/m-offline-badge';
 import { isServer } from '@vue-storefront/core/helpers';
 import Head from 'theme/head';
 import config from 'config';
-import { ModalList } from 'theme/store/ui/modals'
+import { ModalList } from 'theme/store/ui/modals';
 
 export default {
   components: {
@@ -42,7 +46,9 @@ export default {
     MCookieNotification,
     MOfflineBadge,
     OBottomNavigation,
-    OModal
+    OModal,
+    CPSHeader,
+    CPSBody
   },
   data () {
     return {
@@ -51,7 +57,9 @@ export default {
   },
   computed: {
     quicklinkEnabled () {
-      return typeof config.quicklink !== 'undefined' && config.quicklink.enabled
+      return (
+        typeof config.quicklink !== 'undefined' && config.quicklink.enabled
+      );
     }
   },
   beforeMount () {
@@ -98,7 +106,7 @@ export default {
             ? config.entities.category.includeFields
             : null,
         skipCache: isServer
-      })
+      });
     }
   },
   serverPrefetch () {
